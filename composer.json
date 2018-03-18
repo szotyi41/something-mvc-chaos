@@ -1,0 +1,14 @@
+{
+    "name": "szotyi/blog",
+    "description": "Something mvc chaos",
+    "require": {
+        "php": "7.2.0",
+        "silverstripe/sqlite3": "^2.1"
+    },
+    "authors": [
+        {
+            "name": "Buza Péter",
+            "email": "szotyi41@yahoo.com"
+        }
+    ]
+}
