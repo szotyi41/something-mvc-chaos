@@ -2,8 +2,13 @@
     "name": "szotyi/blog",
     "description": "Something mvc chaos",
     "require": {
-        "php": "7.2.0",
+        "php": "7.0.*",
         "silverstripe/sqlite3": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Blog\\":""
+        }
     },
     "authors": [
         {

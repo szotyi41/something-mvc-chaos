@@ -15,10 +15,7 @@ class Controller {
 	public function __construct()
     {
         if(empty($_SESSION)) session_start();
-
-        require_once ROOT_PATH . "Model\Blog.php";
         $blog = new \Blog\Model\Blog;
-
     }
 
 
