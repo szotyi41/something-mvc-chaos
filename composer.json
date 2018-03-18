@@ -2,8 +2,7 @@
     "name": "szotyi/blog",
     "description": "Something mvc chaos",
     "require": {
-        "php": "7.0.*",
-        "silverstripe/sqlite3": "^2.1"
+        "php": "7.*.*"
     },
     "autoload": {
         "psr-4": {
