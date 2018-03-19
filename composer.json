@@ -2,7 +2,10 @@
     "name": "szotyi/blog",
     "description": "Something mvc chaos",
     "require": {
-        "php": "7.*.*"
+        "php": "7.*.*",
+        "components/jquery": "3.3.1",
+        "components/font-awesome": "4.4.0",
+        "froala/wysiwyg-editor": "2.*.*"
     },
     "autoload": {
         "psr-4": {

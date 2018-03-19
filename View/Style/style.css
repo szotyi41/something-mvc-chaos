@@ -14,12 +14,28 @@ head, body {
 }
 
 .date {
-    font-size: 12px;
     margin-bottom: 20px;
     margin-top: 20px;
+
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #AAAAAA;
 }
 
 .content {
     font-size: 14px;
     text-align: justify;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 30px;
+
+    background: #F1F1F1F1;
+    text-transform: uppercase;
+    color: gray;
+}
+
+.tag:before {
+    content: "#";
 }

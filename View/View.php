@@ -23,16 +23,25 @@ class View
         $model = new \Blog\Model\Blog;
         $posts = $model->getPosts();
 
-        foreach($posts as $post) {
-            $_GET['title'] = $post['title'];
-            $_GET['date'] = $this->getTime($post['modified']);
-            $_GET['content'] = $post['content'];
-            include ROOT_PATH . "View" . DIRECTORY_SEPARATOR . "BlogPost.php";
+        if(!empty($posts)) {
+            foreach ($posts as $post) {
+                $_GET['title'] = $post['title'];
+                $_GET['date'] = $this->getTime($post['modified']);
+                $_GET['content'] = $post['content'];
+                $_GET['tags'] = $this->getTags($post['tags']);
+                include ROOT_PATH . "View" . DIRECTORY_SEPARATOR . "BlogPost.php";
+            }
+        } else {
+            include ROOT_PATH . "View" . DIRECTORY_SEPARATOR . "Template" . DIRECTORY_SEPARATOR . "nopost.html";
         }
     }
 
-    public function getTime($dt) {
-        $time = new \DateTime($dt);
-        return $time->format("Y. F. d");
+    public static function getTags($tags) {
+        return explode(",", $tags);
+    }
+
+    public static function getTime($dt) {
+        //$time = new \DateTime($dt);
+        return $dt;//$time->format("Y. F. d");
     }
 }

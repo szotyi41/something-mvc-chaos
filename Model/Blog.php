@@ -14,9 +14,10 @@ class Blog
 
     public function getPosts() {
         $posts = array();
-        $sql = "SELECT title, created, modified, content FROM posts";
+        $sql = "SELECT title, created, modified, content, visible, tags FROM posts WHERE visible = 'TRUE'";
         $query = $this->connection->query($sql);
         $result = $query->fetchAll();
+
         foreach ($result as $row) {
             $posts[] = $row;
         }
