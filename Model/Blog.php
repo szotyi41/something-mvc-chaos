@@ -10,16 +10,18 @@ class Blog
     private $connection;
     function __construct() {
         $this->connection = Database::getConnection();
-        $this->getPosts();
     }
 
-    private function getPosts() {
-        $sql = "SELECT * FROM posts";
+    public function getPosts() {
+        $posts = array();
+        $sql = "SELECT title, created, modified, content FROM posts";
         $query = $this->connection->query($sql);
         $result = $query->fetchAll();
         foreach ($result as $row) {
-            echo $row['title'];
+            $posts[] = $row;
         }
+
+        return $posts;
     }
 
     private function install() {

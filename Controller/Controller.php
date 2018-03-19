@@ -15,7 +15,7 @@ class Controller {
 	public function __construct()
     {
         if(empty($_SESSION)) session_start();
-        $blog = new \Blog\Model\Blog;
+        $view = new \Blog\View\View;
     }
 
 

@@ -1,0 +1,11 @@
+head, body {
+    font-family: "DejaVu Sans", sans-serif;
+}
+
+.title {
+    font-size: 18px;
+}
+
+.date {
+    font-size: 12px;
+}
