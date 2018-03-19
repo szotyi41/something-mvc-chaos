@@ -14,14 +14,19 @@ class View
 
     function __construct()
     {
+        include 'Template/head.html';
+        $this->loadPosts();
+    }
+
+    public function loadPosts() {
         $posts = array();
         $model = new \Blog\Model\Blog;
         $posts = $model->getPosts();
 
         foreach($posts as $post) {
             $_GET['title'] = $post['title'];
-            $_GET['modified'] = $this->getTime($post['modified']);
-            //$_GET['content'] = $post['content'];
+            $_GET['date'] = $this->getTime($post['modified']);
+            $_GET['content'] = $post['content'];
             include ROOT_PATH . "View" . DIRECTORY_SEPARATOR . "BlogPost.php";
         }
     }

@@ -2,10 +2,24 @@ head, body {
     font-family: "DejaVu Sans", sans-serif;
 }
 
+.post {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .title {
-    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 24px;
 }
 
 .date {
     font-size: 12px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.content {
+    font-size: 14px;
+    text-align: justify;
 }
